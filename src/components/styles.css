@@ -1,0 +1,28 @@
+body {
+    background-color: brown;
+}
+
+.square {
+    background-color: burlywood;
+    border: solid 1px red;
+    border-radius: 16px;
+    width: 200px;
+    height: 200px;
+    margin: 5px 0 5px;
+    position: relative;
+}
+
+.square-o {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/481/481078.png');
+    background-size: contain;
+}
+.square-x {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/748/748122.png');
+    background-size: contain;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
