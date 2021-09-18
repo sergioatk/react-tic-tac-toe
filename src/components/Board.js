@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Square } from './Square'
-
+import { Winner } from './Winner';
 import './styles.css';
+
 
 
 
@@ -73,45 +74,58 @@ export const Board = () => {
 
     }
 
-    const isGameFinished = tiles => {
-        return tiles.some(tile => !tile === '');
+    // const isGameFinished = tiles => {
+    //     return tiles.some(tile => !tile === '');
+    // }
+
+    const resetGame = () => {
+        setTiles(Array(9).fill(''));
+        setTurn('x');
+        setWinner(undefined);
     }
 
 
     return (
         <>
-            <h1>{winner && `${winner} won the game`}</h1>
-            <div className="board">
-            {
-                tiles.map((tile, i) => (
 
-                    <Square
-                        id={i}
-                        key={i}
-                        value={tile}
-                        onClick={handler}
-                        turn={turn}
-                        setTurn={setTurn}
-                        tiles={tiles}
-                        setTiles={setTiles}
-                    />
-                ))
+            {winner ?
+                <Winner
+                    winner={winner}
+                    resetGame={resetGame}
+                />
+                :
 
-            }
-            </div>
-            </>
-    
-    
-        
+                <div className="board">
+                    {
+                        tiles.map((tile, i) => (
 
+                            <Square
+                                id={i}
+                                key={i}
+                                value={tile}
+                                onClick={handler}
+                                turn={turn}
+                                setTurn={setTurn}
+                                tiles={tiles}
+                                setTiles={setTiles}
+                            />
+                        ))
 
-
-            
-
-
+                    }
+                </div>
+            } </>
 
 
-       
+
+
+
+
+
+
+
+
+
+
 
 
     )

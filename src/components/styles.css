@@ -26,3 +26,25 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.winner-card {
+    background-color: white;
+    height: 200px;
+    border-radius: 12px;
+    margin: 100px;
+    text-align: center;
+    font-size: 2em;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: solid white 2px;
+    background-color: crimson;
+    color: white;
+    border-radius: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+}
