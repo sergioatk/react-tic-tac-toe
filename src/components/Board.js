@@ -40,7 +40,7 @@ export const Board = () => {
 
                 setTurn('x');
                 isGameWon(newTiles, turn);
-                winner && console.log('game is won')
+                // winner && console.log('game is won')
             }
 
 
@@ -68,7 +68,7 @@ export const Board = () => {
 
         if (winMove[0]) {
             setWinner(player);
-            console.log(`winner is ${player} with tiles ${winMove}`);
+            // console.log(`winner is ${player} with tiles ${winMove}`);
             return winMove
         }
 

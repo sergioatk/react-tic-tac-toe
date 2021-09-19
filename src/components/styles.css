@@ -10,20 +10,24 @@ body {
     height: 200px;
     margin: 5px 0 5px;
     position: relative;
+    flex-basis: 28%;
 }
 
 .square-o {
     background-image: url('https://cdn-icons-png.flaticon.com/512/481/481078.png');
     background-size: contain;
+    background-repeat:no-repeat
+    
 }
 .square-x {
     background-image: url('https://cdn-icons-png.flaticon.com/512/748/748122.png');
     background-size: contain;
+    background-repeat:no-repeat
 }
 
 .board {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 
     
