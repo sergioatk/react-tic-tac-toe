@@ -7,6 +7,7 @@ import './styles.css';
 
 
 
+
 export const Board = () => {
 
     // const [tiles, setTiles] = useState([0,1,2,3,4,5,6,7,8]);
@@ -88,6 +89,8 @@ export const Board = () => {
     return (
         <>
 
+            <h1>Tic-Tac-Toe</h1>
+
             {winner ?
                 <Winner
                     winner={winner}
@@ -113,7 +116,11 @@ export const Board = () => {
 
                     }
                 </div>
-            } </>
+            }
+
+            
+            
+        </>
 
 
 
