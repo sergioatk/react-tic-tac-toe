@@ -1,8 +1,21 @@
 body {
-    background-color: brown;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-size: 20px 20px;
+}
+
+h1 {
+    
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    background-color: purple;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .square {
+  
     background-color: burlywood;
     border: solid 1px red;
     border-radius: 16px;
@@ -15,22 +28,32 @@ body {
 
 .square-o {
     background-image: url('https://cdn-icons-png.flaticon.com/512/481/481078.png');
+    background-position: center;
     background-size: contain;
-    background-repeat:no-repeat
-    
+    background-repeat: no-repeat
 }
+
 .square-x {
     background-image: url('https://cdn-icons-png.flaticon.com/512/748/748122.png');
+    background-position: center;
     background-size: contain;
-    background-repeat:no-repeat
+    background-repeat: no-repeat
 }
 
 .board {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    /* background-color: cadetblue; */
+    margin: 0px 100px;
+    padding: 0px 50px;
+}
 
-    
+@media (max-width: 768px) {
+    .board {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .winner-card {
